@@ -1,5 +1,5 @@
 let validPassports = 0;
-const fields = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'];
+const fields    = ['byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'];
 const eyeColors = ['amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth'];
 
 const regexps = {
@@ -41,7 +41,7 @@ const input = document.getElementsByTagName('pre')[0].textContent.split('\n\n')
     pass.forEach(entry => {
       const [field, value] = entry.split(':');
       // console.log((regexps[field] || String)(value), value);
-      if (fields.includes(field) && !set.has(field) && regexps[field](value)) set.add(field);
+      if (fields.includes(field) && regexps[field](value)) set.add(field);
     });
 
     if (set.size === fields.length) ++validPassports;

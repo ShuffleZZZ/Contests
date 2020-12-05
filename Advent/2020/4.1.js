@@ -8,14 +8,10 @@ const input = document.getElementsByTagName('pre')[0].textContent.split('\n\n')
 
     pass.forEach(entry => {
       const field = entry.split(':')[0];
-      if (fields.includes(field) && !set.has(field)) {
-        set.add(field);
-      }
+      if (fields.includes(field)) set.add(field);
     });
 
-    if (set.size === fields.length) {
-      ++validPassports;
-    }
+    if (set.size === fields.length) ++validPassports;
   });
 
 console.log(validPassports);
