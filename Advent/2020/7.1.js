@@ -1,22 +1,8 @@
-class Node {
-  constructor(weight) {
-    this.weight = weight;
-  }
-
-  addNodes(string) {
-    const args = string.split(', ');
-    args[args.length - 1].slice(0, -1);
-
-    this.nodes = args.map(it => Node(it => it.split(' ')[0]));
-  }
-}
-
 const input = document.getElementsByTagName('pre')[0].textContent
-  .split('.\n').map(it => it.split(' bags contain '));
+  .split('.\n').map(it => it.split('bags contain'));
 input.pop();
 
-const amount = new Set();
-const root = Node(1);
+const colors = new Set();
 let prevLayer = new Set(['shiny gold']);
 
 while (true) {
@@ -24,10 +10,7 @@ while (true) {
 
   prevLayer.forEach(color => {
     input.forEach(([bag, inside]) => {
-      if (bag.includes(color)) {
-
-      }
-        dfsLayer.add(bag);
+      if (inside.includes(color)) dfsLayer.add(bag);
     });
   });
 
