@@ -12,7 +12,7 @@ res.fill(0, 0, res.length);
 function count(curJolts) {
   let sum = 0;
 
-  for(let fit = curJolts + 1; fit - curJolts <= 3; fit++) {
+  for(let fit = curJolts + 1; fit - curJolts <= JOLTS_GAP; fit++) {
     if (fit === input[input.length - 1]) return 1;
 
     if (input.includes(fit)) sum += res[fit] || count(fit);
