@@ -5,11 +5,11 @@ fun main() {
     .zipWithNext().count { (a, b) -> a.sum() < b.sum() }
 
   // test if implementation meets criteria from the description, like:
-  val testInput = readInt("input_test")
+  val testInput = readInts("input_test")
   check(part1(testInput) == 7)
   check(part2(testInput) == 5)
 
-  val input = readInt("input")
+  val input = readInts("input")
   println(part1(input))
   println(part2(input))
 }
