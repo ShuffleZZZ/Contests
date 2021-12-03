@@ -5,6 +5,8 @@ the [Advent of Code Kotlin Template][template] delivered by JetBrains.
 
 In this repository, shufflezzz is about to provide solutions for the puzzles using [Kotlin][kotlin] language.
 
+This is my attempt to solve most of 2021 Advent Of Code puzzles without using a global state or variables.
+
 If you stuck with Kotlin-specific questions or anything related to this template, check out the following resources:
 
 - [Kotlin docs][docs]

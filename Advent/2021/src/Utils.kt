@@ -12,7 +12,7 @@ fun readInput(name: String) = getInputFile(name).readLines()
 /**
  * Reads Int values placed one at each line.
  */
-fun readInts(name: String) = readInput(name).map { it.toInt() }
+fun readInts(name: String, radix: Int = 10) = readInput(name).map { it.toInt(radix) }
 
 /**
  * Converts string to md5 hash.
