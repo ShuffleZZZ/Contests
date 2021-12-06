@@ -27,7 +27,7 @@ data class Bingo(
     checkNumber(numbers.removeFirst())
     val lastBoardInd = checkLose() ?: invoke2()
 
-    return if (lastBoardInd in map.indices) return evaluateLastBoard(lastBoardInd) else lastBoardInd
+    return if (lastBoardInd in map.indices) evaluateLastBoard(lastBoardInd) else lastBoardInd
   }
 
   private fun evaluateLastBoard(lastBoardInd: Int): Int {
