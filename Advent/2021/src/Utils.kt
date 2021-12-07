@@ -14,6 +14,10 @@ fun readInput(name: String) = getInputFile(name).readLines()
  */
 fun readInts(name: String, radix: Int = 10) = readInput(name).map { it.toInt(radix) }
 
+fun readIntLine(name: String, separator: String = " ", radix: Int = 10) = readInput(name).map {
+  it.split(separator).map(String::trim).map { chunk -> chunk.toInt(radix) }
+}.single()
+
 /**
  * Converts string to md5 hash.
  */
