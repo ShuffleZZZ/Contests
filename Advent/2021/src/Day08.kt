@@ -61,10 +61,10 @@ fun main() {
         it[2] = findBottomRight(strings, it.filterNot('ö'::equals).toSet())
         it[5] = findTopLeft(strings, it.filterNot('ö'::equals).toSet())
 
-          it
-        }.let { right.map { string -> string.toNumber(it) }.joinToString("").toInt() }
-      }
-    }.sumOf { it }
+        it
+      }.let { right.map { string -> string.toNumber(it) }.joinToString("").toInt() }
+    }
+  }.sumOf { it }
 
   // test if implementation meets criteria from the description, like:
   val testInput = readInput("input_test")
