@@ -59,13 +59,13 @@ fun main() {
         if (it.isOpen()) stack.add(it).let { null } else if (stack.safePop(it)) null else ind
       }.let { if (it.isEmpty()) stack else null }
     }
-  }.map { it.complete().map { br -> br.matchingPoints() }.reduce { acc, br -> acc * 5 + br } }.sorted()
+  }.map { it.complete().map { br -> br.matchingPoints().toLong() }.reduce { acc, br -> acc * 5 + br } }.sorted()
     .let { it[it.size / 2] }
 
   // test if implementation meets criteria from the description, like:
   val testInput = readInput("input_test")
   check(part1(testInput) == 26_397)
-  check(part2(testInput) == 288_957)
+  check(part2(testInput) == 288_957L)
 
   val input = readInput("input")
   println(part1(input))
