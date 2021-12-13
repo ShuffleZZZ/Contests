@@ -18,6 +18,8 @@ fun readIntLine(name: String, separator: String = " ", radix: Int = 10) = readIn
   it.split(separator).map(String::trim).map { chunk -> chunk.toInt(radix) }
 }.single()
 
+fun List<String>.parseInts() = this.map { it.map { char -> char.toString().toInt() } }
+
 /**
  * Converts string to md5 hash.
  */

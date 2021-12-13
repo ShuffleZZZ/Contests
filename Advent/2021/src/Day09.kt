@@ -1,8 +1,6 @@
 typealias Cell = Pair<Int, Int>
 typealias Grid = List<List<Int>>
 
-fun List<String>.parse() = this.map { it.map { char -> char.toString().toInt() } }
-
 fun makeRange(size: Int, x: Int) = if (x - 1 >= 0) if (x + 1 <= size - 1) listOf(x - 1, x + 1) else listOf(x - 1)
 else if (x + 1 <= size - 1) listOf(x + 1) else error("Corrupted grid")
 
@@ -30,11 +28,11 @@ fun main() {
     .reduce(Int::times)
 
   // test if implementation meets criteria from the description, like:
-  val testInput = readInput("input_test").parse()
+  val testInput = readInput("input_test").parseInts()
   check(part1(testInput) == 15)
   check(part2(testInput) == 1134)
 
-  val input = readInput("input").parse()
+  val input = readInput("input").parseInts()
   println(part1(input))
   println(part2(input))
 }
