@@ -1,0 +1,3 @@
+[submodule "2022"]
+	path = Advent/2022
+	url = https://github.com/ShuffleZZZ/advent-of-code-kotlin.git
