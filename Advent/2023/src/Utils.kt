@@ -3,6 +3,8 @@ import java.security.MessageDigest
 import kotlin.io.path.Path
 import kotlin.io.path.readLines
 
+fun Boolean.toInt() = if (this) 1 else 0
+
 /**
  * Reads lines from the given input txt file.
  */
