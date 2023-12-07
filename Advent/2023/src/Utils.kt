@@ -5,6 +5,16 @@ import kotlin.io.path.readLines
 
 fun Boolean.toInt() = if (this) 1 else 0
 
+fun <T: Comparable<T>> List<T>.compareTo(other: List<T>): Int {
+  assert(this.size == other.size)
+
+  for (i in this.indices) {
+    if (this[i] != other[i]) return this[i].compareTo(other[i])
+  }
+
+  return 0
+}
+
 /**
  * Reads lines from the given input txt file.
  */
